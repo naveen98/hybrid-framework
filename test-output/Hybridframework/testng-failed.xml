@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [hybrid-framework]">
+  <test thread-count="5" name="gmr tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.gmr.Testcases.Logintestcase">
+        <methods>
+          <include name="logintest"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gmr.Testcases.Logintestcase -->
+    </classes>
+  </test> <!-- gmr tests(failed) -->
+</suite> <!-- Failed suite [hybrid-framework] -->

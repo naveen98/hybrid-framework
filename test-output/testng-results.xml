@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-11T11:28:30 IST" name="Suite" finished-at="2025-07-11T11:29:11 IST" duration-ms="40773">
+    <groups>
+    </groups>
+    <test started-at="2025-07-11T11:28:30 IST" name="Test" finished-at="2025-07-11T11:29:11 IST" duration-ms="40773">
+      <class name="cmstestcases.UserMnagementUserTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:cmstestcases.UserMnagementUserTest@c0c2f8d]" started-at="2025-07-11T11:28:30 IST" name="setup" finished-at="2025-07-11T11:28:57 IST" duration-ms="26296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="LoginTest()[pri:0, instance:cmstestcases.UserMnagementUserTest@c0c2f8d]" started-at="2025-07-11T11:28:57 IST" name="LoginTest" finished-at="2025-07-11T11:29:00 IST" duration-ms="3404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method signature="AppSelectionPage()[pri:1, instance:cmstestcases.UserMnagementUserTest@c0c2f8d]" started-at="2025-07-11T11:29:00 IST" name="AppSelectionPage" finished-at="2025-07-11T11:29:00 IST" depends-on-methods="cmstestcases.UserMnagementUserTest.LoginTest" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppSelectionPage -->
+        <test-method signature="NavigateToUserMangement()[pri:2, instance:cmstestcases.UserMnagementUserTest@c0c2f8d]" started-at="2025-07-11T11:29:00 IST" name="NavigateToUserMangement" finished-at="2025-07-11T11:29:04 IST" depends-on-methods="cmstestcases.UserMnagementUserTest.AppSelectionPage" duration-ms="3985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToUserMangement -->
+        <test-method signature="UserWorkFlowConfig()[pri:9, instance:cmstestcases.UserMnagementUserTest@c0c2f8d]" started-at="2025-07-11T11:29:04 IST" name="UserWorkFlowConfig" finished-at="2025-07-11T11:29:11 IST" duration-ms="6289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserWorkFlowConfig -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:cmstestcases.UserMnagementUserTest@c0c2f8d]" started-at="2025-07-11T11:29:11 IST" name="teardown" finished-at="2025-07-11T11:29:11 IST" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- cmstestcases.UserMnagementUserTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -165,6 +165,7 @@ public class UserAddPage {
     public boolean selectRadioButtonOption(String labelText, String optionText) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         try {
+        	//label 
             String labelxpath = "//div[@class='form-group zc-field-radio'][.//span[contains(text(),'" + labelText + "')]]";
             WebElement radioGroup = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(labelxpath)));
 

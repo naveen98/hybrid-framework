@@ -55,7 +55,7 @@ public class Reporting  extends TestListenerAdapter{
 	 
 	  public void onTestStart(ITestResult result) {
 		  
-		    System.out.println(" ======Test started : " + result.getMethod().getMethodName());
+		    System.out.println(" ======Test started ======: " + result.getMethod().getMethodName());
 
 		    ExtentTest test = extent.createTest(result.getMethod().getMethodName());
 	        extentTest.set(test);

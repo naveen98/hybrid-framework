@@ -3,22 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cmstestcases.UserMnagementUserTest">
+      <class name="adstestcases.AdsLedCreateCampaignTest">
         <methods>
-          <include name="AppSelectionPage"/>
-          <include name="CreateUser"/>
-          <include name="UserWorkFlowConfig"/>
-          <include name="NavigateToUserMangement"/>
-          <include name="DeleteUser"/>
+          <include name="NaviagtionToLedCampaign"/>
+          <include name="Appselection"/>
           <include name="teardown"/>
-          <include name="EditUser"/>
-          <include name="AccessType"/>
-          <include name="LoginTest"/>
-          <include name="ActiveOrInactive"/>
-          <include name="ResetPassword"/>
+          <include name="loginTest"/>
+          <include name="EditCampaign"/>
+          <include name="CreateCampaign"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- cmstestcases.UserMnagementUserTest -->
+      </class> <!-- adstestcases.AdsLedCreateCampaignTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

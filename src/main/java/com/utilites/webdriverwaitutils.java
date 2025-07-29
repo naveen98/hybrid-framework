@@ -30,6 +30,7 @@ public class webdriverwaitutils {
 	        return wait.until(ExpectedConditions.elementToBeClickable(element));
 	    }
 
+	   
 	    public WebElement waitForPresence(By locator) {
 	        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	    }
@@ -91,13 +92,11 @@ public class webdriverwaitutils {
 	        return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	    }
 
-	    public void wait(int millis) {
-	        try {
-	            Thread.sleep(millis);
-	        } catch (InterruptedException e) {
-	            Thread.currentThread().interrupt();
-	        }
+	    public WebElement waitForPresenceOfElementLocatedby(By locator) {
+	        return new WebDriverWait(driver, Duration.ofSeconds(60))
+	            .until(ExpectedConditions.presenceOfElementLocated(locator));
 	    }
+	 
 	    
 	    public WebElement waitForTextToBePresentsendkeys(WebElement element, String text) {
 	        try {

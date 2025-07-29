@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="adstestcases.AdsReporting"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="dev"/>
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="cmstestcases.UserMnagementUserTest">
+      <class name="adstestcases.AdsLedCreateCampaignTest">
         <methods>
-          <include name="AppSelectionPage"/>
-          <include name="CreateUser"/>
-          <include name="UserWorkFlowConfig"/>
-          <include name="NavigateToUserMangement"/>
-          <include name="DeleteUser"/>
+          <include name="CreatewithInvalid"/>
+          <include name="Appselection"/>
           <include name="teardown"/>
-          <include name="EditUser"/>
-          <include name="AccessType"/>
-          <include name="LoginTest"/>
-          <include name="ActiveOrInactive"/>
-          <include name="ResetPassword"/>
+          <include name="loginTest"/>
+          <include name="setupSummary"/>
+          <include name="NavigationToLedCampaign"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- cmstestcases.UserMnagementUserTest -->
+      </class> <!-- adstestcases.AdsLedCreateCampaignTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

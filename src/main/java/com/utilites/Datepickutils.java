@@ -65,7 +65,7 @@ public class Datepickutils {
 				
 				// String price = parts[1];
 
-				System.out.println(date);
+			//	System.out.println(date);
 
 				if (date.equals(expDate)) {
 					
@@ -89,89 +89,63 @@ public class Datepickutils {
 	
 	//both cases can handle
 		
-	public void datepickers(By monthlocator ,By yearLocator ,By Prevbtn, By nextButton, By allDates, String expMonth, String expYear,String expDate) {
+	  public void datepickers(By monthLocator, By yearLocator, By prevBtn, By nextBtn, By allDates, String expMonth, String expYear, String expDate) {
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        String[] monthList = {"January", "February", "March", "April", "May", "June",
+	                              "July", "August", "September", "October", "November", "December"};
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    String[] monthList = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+	        try {
+	            while (true) {
+	                String currentMonth = wait.waitForVisibilityBy(monthLocator).getText().trim();
+	                String currentYear = wait.waitForVisibilityBy(yearLocator).getText().trim();
 
-		try {
-			// select month
-			while (true) {
+	                int currentYearNum = Integer.parseInt(currentYear);
+	                int expYearNum = Integer.parseInt(expYear);
+	                int currentMonthIndex = Arrays.asList(monthList).indexOf(currentMonth);
+	                int expMonthIndex = Arrays.asList(monthList).indexOf(expMonth);
 
-				String currentmonthloc = wait.waitForVisibilityBy(monthlocator).getText();  //may
-				String currentyearloc = wait.waitForVisibilityBy(yearLocator).getText();
-                  
-				
-				int currentyearnum=Integer.parseInt(currentyearloc);
-				int expyearnum=Integer.parseInt(expYear);
-				
-				int currentmonthindex =Arrays.asList(monthList).indexOf(currentmonthloc);
-				int expmonthindex= Arrays.asList(monthList).indexOf(expMonth);
-				
-				
-				
-			  System.out.println("Current Month: " + currentmonthloc + " " + "currentyear :" + currentyearnum +"expMonth:" +expMonth +" "+expyearnum  );
-           
-				if (currentmonthloc.equalsIgnoreCase(expMonth) && currentyearloc.equalsIgnoreCase(expYear)) {
-					break;
+	                if (currentMonth.equalsIgnoreCase(expMonth) && currentYear.equalsIgnoreCase(expYear)) {
+	                    break;
+	                } else if (currentYearNum > expYearNum || (currentYearNum == expYearNum && currentMonthIndex > expMonthIndex)) {
+	                    WebElement prev = wait.waitForClickabilityby(prevBtn);
+	                    js.executeScript("arguments[0].click();", prev);
+	                } else {
+	                    WebElement next = wait.waitForClickabilityby(nextBtn);
+	                    js.executeScript("arguments[0].click();", next);
+	                }
+	                Thread.sleep(1000); 
+	            }
+	        } catch (Exception e) {
+	            System.out.println("Month/Year selection failed: " + e.getMessage());
+	        }
 
-				    //previous
-				//	WebElement prevbtns = wait.waitForClickabilityby(Prevbtn);
-					
-				//	js.executeScript("arguments[0].click();", prevbtns);
-					
+	        
+	        //Date Selection
+	        try {
+	            List<WebElement> dates = wait.waitForAllElementsVisible(allDates);
 
-				}
-				else if(currentyearnum > expyearnum || (currentyearnum == expyearnum && currentmonthindex > expmonthindex)) {
+	            for (WebElement d : dates) {
+	            	
+	                String datetext = d.getText().trim();
+	                
+	             //   System.out.println("Date : " + datetext);
 
-					
-					    WebElement prevbtns = wait.waitForVisibilityBy(Prevbtn);
-					
-						js.executeScript("arguments[0].click();", prevbtns);
-				}else {
-					
-			    // next	
-				WebElement nextbtn = wait.waitForVisibilityBy(nextButton);
-				js.executeScript("arguments[0].click();", nextbtn);
-				
-				}
-			}
-	
-		}   catch (Exception e) {
-			System.out.println("Month year invalid selection  :" );
-
-		}
-
-		
-		// select the date
-		try {
-			
-			List<WebElement> dates = wait.waitForAllElementsVisible(allDates);
-
-			for (WebElement d : dates) {
-
-				String datemsg = d.getText();
-
-	
-				System.out.println(datemsg);
-
-				if (datemsg.equals(expDate)) {
-					
-					js.executeScript("arguments[0].click();", d);
-					System.out.println(expDate);
-					
-					break;
-					
-				}
-			}
-			
-		} catch (Exception e) {
-
-			System.out.println("Invalid Date Selection" + e.getMessage());
-		}
-
-	}
-
+	                if (!datetext.isEmpty() && datetext.equals(expDate)) {
+	                    try {
+	                        wait.waitForClickability(d).click();
+	                        //System.out.println("Date clicked using WebDriver: " + expDate);
+	                    } catch (Exception clickEx) {
+	                        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", d);
+	                        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", d);
+	                     //   System.out.println("Date clicked using Js: " + expDate);
+	                    }
+	                    break;
+	                }
+	            }
+	        } catch (Exception e) {
+	            System.out.println("Date selection failed: " + e.getMessage());
+	        }
+	  }
 }
 
 	

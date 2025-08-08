@@ -9,17 +9,19 @@
     <parameter name="env" value="dev"/>
     <groups>
       <run>
-        <include name="Regression"/>
+        <include name="smoke"/>
       </run>
     </groups>
     <classes>
       <class name="adstestcases.AdsLedCreateCampaignTest">
         <methods>
-          <include name="CreatewithInvalid"/>
           <include name="Appselection"/>
+          <include name="DeleteCampaign"/>
           <include name="teardown"/>
+          <include name="Paginations"/>
           <include name="loginTest"/>
-          <include name="setupSummary"/>
+          <include name="EditCampaign"/>
+          <include name="CreateCampaign"/>
           <include name="NavigationToLedCampaign"/>
           <include name="setup"/>
         </methods>

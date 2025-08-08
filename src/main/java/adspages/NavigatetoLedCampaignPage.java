@@ -56,6 +56,7 @@ public class NavigatetoLedCampaignPage {
 
 			} else {
 				System.out.println("not diaplayed");
+				Assert.fail();
 			}
 		} catch (Exception e) {
 			System.out.println("Exception while verifying title: " + e.getMessage());

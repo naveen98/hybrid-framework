@@ -21,40 +21,38 @@ public class AddBasicInformationDetailsPage {
     JavascriptExecutor js;
     public Datepickutils dt;
     TimePickersUtil timepicker;
-    
 
     public AddBasicInformationDetailsPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new webdriverwaitutils(driver);
         this.js = (JavascriptExecutor) driver;
         this.dt = new Datepickutils(driver);
-        this.timepicker=new TimePickersUtil(driver);
-        
+        this.timepicker = new TimePickersUtil(driver);
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//i[@class='icon-plus ng-star-inserted']") private WebElement addbutton;
-    @FindBy(xpath = "//input[@id='name']") private WebElement txtname;
-    
-	@FindBy(xpath = "//li[@id='menu-li-led-campaigns']")
-	private WebElement clickonledcampaign;
-	
-    @FindBy(xpath = "(//button[@type='button'])[1]") private WebElement clicknextbutton;
-    
-  
+    // WebElements
+    @FindBy(xpath = "//i[@class='icon-plus ng-star-inserted']")
+    private WebElement addbutton;
 
-    private By Starttime=By.xpath("(//input[@type='time'])[1]");
-  //  @FindBy(xpath = "(//input[@class='form-control ng-valid ng-star-inserted ng-touched ng-dirty'])[1]")private WebElement starttime;
-    
-    
+    @FindBy(xpath = "//input[@id='name']")
+    private WebElement txtname;
 
-    private By Endtime=By.xpath("(//input[@type='time'])[2]");
+    @FindBy(xpath = "//li[@id='menu-li-led-campaigns']")
+    private WebElement clickonledcampaign;
 
-   // @FindBy(xpath = "(//input[@class='form-control ng-pristine ng-valid ng-star-inserted ng-touched'])[1]")private WebElement Endtime;
-    @FindBy(xpath = "//textarea[@id='display_text']") private WebElement textdisplay;
+    @FindBy(xpath = "(//button[@type='button'])[1]")
+    private WebElement clicknextbutton;
 
+    @FindBy(xpath = "//textarea[@id='display_text']")
+    private WebElement textdisplay;
 
-  
+    @FindBy(xpath = "//div[@class='invalid-feedback ng-star-inserted']")
+    private List<WebElement> validationmessages;
+
+    // Locators
+    private By Starttime = By.xpath("(//input[@type='time'])[1]");
+    private By Endtime = By.xpath("(//input[@type='time'])[2]");
     private By startdateopen = By.xpath("(//i[@class='icon-calendar ui-state-default ng-star-inserted'])[1]");
     private By enddateopen = By.xpath("(//i[@class='icon-calendar ui-state-default ng-star-inserted'])[2]");
     private By Monthtextlocator = By.xpath("//button[@class='current ng-star-inserted']");
@@ -62,75 +60,83 @@ public class AddBasicInformationDetailsPage {
     private By startnext = By.xpath("//button[@class='next']");
     private By startprevious = By.xpath("//button[@class='previous']");
     private By alldates = By.xpath("//td[@role='gridcell']");
-    
-    @FindBy(xpath = "//div[@class='invalid-feedback ng-star-inserted']")private List<WebElement> validationmessages;
-    
-    
 
-    // Action Method to Click Add Basic Info Button
+    // Click on LED Campaign section
     public void clickonledscreen() {
-    	try {
-    		WebElement ele=wait.waitForVisibility(clickonledcampaign);
-    		ele.click();
-    	}
-    	catch (Exception e) {
-           System.out.println("exception  "+e.getMessage());
-    	}
-    	
+        try {
+         	js.executeScript("window.scrollBy(0, -500);");
+            WebElement ledsection = wait.waitForVisibility(clickonledcampaign);
+            if (ledsection != null && ledsection.isDisplayed()) {
+           
+            	//js.executeScript("arguments[0].scrollIntoView(true);", ledsection);
+                wait.waitForClickability(ledsection).click();
+            }
+        } catch (Exception e) {
+            js.executeScript("arguments[0].click();", clickonledcampaign);
+        }
     }
+
+    // Click Add Button
     public void addcreatebutton() {
         try {
-        	WebElement addbtn=wait.waitForVisibility(addbutton);
-        	if(addbtn!=null&&addbtn.isDisplayed()) {
+            WebElement addbtn = wait.waitForVisibility(addbutton);
+            if (addbtn != null && addbtn.isDisplayed()) {
                 wait.waitForClickability(addbtn).click();
-        	}
+            }
         } catch (Exception e) {
             js.executeScript("arguments[0].click();", addbutton);
         }
     }
 
-    
+    // Enter Campaign Name
     public void entertext(String name) {
-    	try {
-    		wait.waitForEnterText(txtname, name);
-    		
-    	}catch (Exception e) {
-              System.out.println("Exception Enter Name:"+e.getMessage());
-
-		}
-    	
-    	
+        try {
+            wait.waitForEnterText(txtname, name);
+        } catch (Exception e) {
+            System.out.println("Exception while entering name: " + e.getMessage());
+        }
     }
-    // Start date Date Picker
+
+    // Start Date Picker
     public void startDate(String month, String year, String date) {
         try {
             wait.waitForClickabilityby(startdateopen).click();
             dt.datepickers(Monthtextlocator, yeartextlocator, startprevious, startnext, alldates, month, year, date);
-            Thread.sleep(1000);
         } catch (Exception e) {
             System.out.println("Error selecting start date: " + e.getMessage());
         }
     }
 
-    //End date
+    // End Date Picker
     public void endDate(String month, String year, String date) {
         try {
             wait.waitForClickabilityby(enddateopen).click();
             dt.datepickers(Monthtextlocator, yeartextlocator, startprevious, startnext, alldates, month, year, date);
-            Thread.sleep(1000);
+          
         } catch (Exception e) {
             System.out.println("Error selecting end date: " + e.getMessage());
         }
-    }    
-    
+    }
+
+    // Set Start Time
     public void setStartTime(String time) {
-        timepicker.setTime(Starttime, time);
+        try {
+            timepicker.setTime(Starttime, time);
+        } catch (Exception e) {
+            System.out.println("Error setting start time: " + e.getMessage());
+        }
     }
 
+    // Set End Time
     public void setEndTime(String time) {
-        timepicker.setTime(Endtime, time);
+        try {
+            timepicker.setTime(Endtime, time);
+        } catch (Exception e) {
+            System.out.println("Error setting end time: " + e.getMessage());
+        }
     }
 
+    // Enter Display Text
     public void displayText(String text) {
         try {
             wait.waitForEnterText(textdisplay, text);
@@ -138,37 +144,38 @@ public class AddBasicInformationDetailsPage {
             System.out.println("Error entering display text: " + e.getMessage());
         }
     }
-    
-    public void clicknext() {
-    	WebElement nextbtn=wait.waitForVisibility(clicknextbutton);
-    	
-    	try {
-    		if(nextbtn!=null&&nextbtn.isDisplayed()) {
-        		wait.waitForClickability(nextbtn).click();
-    		}
-    	}
-    	catch (Exception e) {
 
-                  System.out.println("Exception ");
-		}
+    // Click Next Button
+    public void clicknext() {
+        try {
+            WebElement nextbtn = wait.waitForVisibility(clicknextbutton);
+            if (nextbtn != null && nextbtn.isDisplayed()) {
+                wait.waitForClickability(nextbtn).click();
+            }
+        } catch (Exception e) {
+            System.out.println("Error clicking next button: " + e.getMessage());
+        }
     }
+
+    // Get all validation messages displayed
     public List<String> getValidationMessages() {
         List<String> messages = new ArrayList<>();
-
         try {
-            List<WebElement> elements = wait.waitForAllElementsVisible(validationmessages);
+            if (validationmessages != null && !validationmessages.isEmpty()) {
+                wait.waitForAllElementsVisible(validationmessages);
 
-            for (WebElement el : elements) {
-                if (el != null && el.isDisplayed()) {
-                    messages.add(el.getText().trim());
-                } else {
-                    System.out.println("Validation message not displayed.");
+                for (WebElement el : validationmessages) {
+                    if (el != null && el.isDisplayed()) {
+                        String text = el.getText().trim();
+                        if (!text.isEmpty()) {
+                            messages.add(text);
+                        }
+                    }
                 }
             }
         } catch (Exception e) {
-            System.out.println("Exception while fetching validation messages: " + e.getMessage());
+            System.out.println("Error fetching validation messages: " + e.getMessage());
         }
-
         return messages;
     }
 

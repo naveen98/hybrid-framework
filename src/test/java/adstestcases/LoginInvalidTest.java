@@ -11,11 +11,13 @@ import adspages.AdsLoginPage;
 public class LoginInvalidTest extends AdsBaseClass {
 
    
-    public void verifyInvalidLoginMultiple() {
+    public static  void verifyInvalidLoginMultiple() {
         try {
             AdsLoginPage lp = new AdsLoginPage(driver);
 
-            String excelPath = "D:\\git-clone\\hybrid-framework\\src\\test\\resources\\Adsinvalidlogintest.xlsx";
+            lp.clicklogout();
+            
+            String excelPath = "D:\\Selenium\\hybrid-framework\\src\\test\\resources\\Adsinvalidlogintest.xlsx";
             String sheetName = "invalid";
             String expectedTitle = "Login || ads Application";
 

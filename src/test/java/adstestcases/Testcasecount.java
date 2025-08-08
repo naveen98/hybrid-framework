@@ -8,14 +8,6 @@ public class Testcasecount {
 
 	    public static String testClassName = "";
 
-	    public static void reset(String name) {
-	        totalTestCaseCount = 0;
-	        passedTestCaseCount = 0;
-	        failedTestCaseCount = 0;
-	        skippedTestCaseCount = 0;
-	        testClassName = name;
-	    }
-
 	    public static void incrementTotal() {
 	        totalTestCaseCount++;
 	    }

@@ -13,7 +13,7 @@ public class Adsconfiguration {
 
     public Adsconfiguration(String environment) {
         try {
-            File src = new File("D:\\git-clone\\hybrid-framework\\configurations\\Ads.properties");
+            File src = new File("D:\\Selenium\\hybrid-framework\\configurations\\Ads.properties");
 
             if (!src.exists()) {
                 throw new RuntimeException("Configuration file not found at: " + src.getAbsolutePath());

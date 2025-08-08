@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/5</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/9</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 23 09:57:33 IST 2025</td>
+<td>Started on:</td><td>Fri Aug 01 16:42:56 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (100 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (143 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -79,7 +79,7 @@ function toggleAllBoxes() {
 <td title='adstestcases.AdsLedCreateCampaignTest.setup()'><b>setup</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
 <td><div><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -103,10 +103,10 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1787079037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1787079037'><pre>org.testng.TestNGException: 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1810742349", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1810742349'><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -131,22 +131,68 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1753244853</td>
-<td>adstestcases.AdsLedCreateCampaignTest@131ef10</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>-1754046776</td>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
 <tr>
 <td title='adstestcases.AdsLedCreateCampaignTest.teardown()'><b>teardown</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
-<td></td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.warn(String)&quot; because &quot;adstestcases.AdsBaseClass.log&quot; is null
+	at adstestcases.AdsBaseClass.teardown(AdsBaseClass.java:130)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1014982340", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1014982340'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.logging.log4j.Logger.warn(String)&quot; because &quot;adstestcases.AdsBaseClass.log&quot; is null
+	at adstestcases.AdsBaseClass.teardown(AdsBaseClass.java:130)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
 <td>0</td>
-<td>adstestcases.AdsLedCreateCampaignTest@131ef10</td></tr>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -157,10 +203,106 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='adstestcases.AdsLedCreateCampaignTest.CreateCampaign()'><b>CreateCampaign</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td title='adstestcases.AdsLedCreateCampaignTest.Appselection()'><b>Appselection</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.loginTest() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace501705927", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace501705927'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.loginTest() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
+<tr>
+<td title='adstestcases.AdsLedCreateCampaignTest.Paginations()'><b>Paginations</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.Paginations() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.DeleteCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1846501247", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1846501247'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.Paginations() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.DeleteCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
+<tr>
+<td title='adstestcases.AdsLedCreateCampaignTest.InvalidLoginCheck()'><b>InvalidLoginCheck</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
 <td><div><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -184,10 +326,10 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1725165248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1725165248'><pre>org.testng.TestNGException: 
+</pre></div><a href='#' onClick='toggleBox("stack-trace782505238", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace782505238'><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -213,60 +355,12 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>adstestcases.AdsLedCreateCampaignTest@131ef10</td></tr>
-<tr>
-<td title='adstestcases.AdsLedCreateCampaignTest.Appselection()'><b>Appselection</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
-<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@131ef10 depends on not successfully finished methods 
-[adstestcases.AdsLedCreateCampaignTest.loginTest() on instance adstestcases.AdsLedCreateCampaignTest@131ef10]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1825738663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1825738663'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@131ef10 depends on not successfully finished methods 
-[adstestcases.AdsLedCreateCampaignTest.loginTest() on instance adstestcases.AdsLedCreateCampaignTest@131ef10]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>adstestcases.AdsLedCreateCampaignTest@131ef10</td></tr>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
 <tr>
 <td title='adstestcases.AdsLedCreateCampaignTest.loginTest()'><b>loginTest</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
 <td><div><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -290,10 +384,10 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace550302731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace550302731'><pre>org.testng.TestNGException: 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1567705314", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1567705314'><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -319,11 +413,11 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>adstestcases.AdsLedCreateCampaignTest@131ef10</td></tr>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
 <tr>
-<td title='adstestcases.AdsLedCreateCampaignTest.NaviagtionToLedCampaign()'><b>NaviagtionToLedCampaign</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
-<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.NaviagtionToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@131ef10 depends on not successfully finished methods 
-[adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@131ef10]
+<td title='adstestcases.AdsLedCreateCampaignTest.CreateCampaign()'><b>CreateCampaign</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.CreateCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.NavigationToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -343,9 +437,9 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1194893830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1194893830'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.NaviagtionToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@131ef10 depends on not successfully finished methods 
-[adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@131ef10]
+</pre></div><a href='#' onClick='toggleBox("stack-trace2087785333", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2087785333'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.CreateCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.NavigationToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -367,12 +461,108 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>adstestcases.AdsLedCreateCampaignTest@131ef10</td></tr>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
 <tr>
-<td title='adstestcases.AdsLedCreateCampaignTest.EditCampaign()'><b>EditCampaign</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td title='adstestcases.AdsLedCreateCampaignTest.CreatewithInvalid()'><b>CreatewithInvalid</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.CreatewithInvalid() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.NavigationToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1055096410", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1055096410'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.CreatewithInvalid() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.NavigationToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
+<tr>
+<td title='adstestcases.AdsLedCreateCampaignTest.NavigationToLedCampaign()'><b>NavigationToLedCampaign</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.NavigationToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1497018177", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1497018177'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.NavigationToLedCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.Appselection() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
+<tr>
+<td title='adstestcases.AdsLedCreateCampaignTest.DeleteCampaign()'><b>DeleteCampaign</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
 <td><div><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -396,10 +586,10 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace503642634", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace503642634'><pre>org.testng.TestNGException: 
+</pre></div><a href='#' onClick='toggleBox("stack-trace936653983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace936653983'><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsuite.xml
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--349651282\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -425,7 +615,55 @@ in C:\Users\Naveen\AppData\Local\Temp\testng-eclipse-1682703898\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>adstestcases.AdsLedCreateCampaignTest@131ef10</td></tr>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
+<tr>
+<td title='adstestcases.AdsLedCreateCampaignTest.EditCampaign()'><b>EditCampaign</b><br>Test class: adstestcases.AdsLedCreateCampaignTest</td>
+<td><div><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.EditCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.CreateCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1526970878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1526970878'><pre>java.lang.Throwable: Method adstestcases.AdsLedCreateCampaignTest.EditCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37 depends on not successfully finished methods 
+[adstestcases.AdsLedCreateCampaignTest.CreateCampaign() on instance adstestcases.AdsLedCreateCampaignTest@69453e37]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>adstestcases.AdsLedCreateCampaignTest@69453e37</td></tr>
 </table><p>
 </body>
 </html>

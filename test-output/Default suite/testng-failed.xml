@@ -5,12 +5,18 @@
     <classes>
       <class name="adstestcases.AdsLedCreateCampaignTest">
         <methods>
-          <include name="NaviagtionToLedCampaign"/>
+          <include name="CreatewithInvalid"/>
           <include name="Appselection"/>
+          <include name="DeleteCampaign"/>
           <include name="teardown"/>
+          <include name="Paginations"/>
           <include name="loginTest"/>
+          <include name="setupSummary"/>
           <include name="EditCampaign"/>
           <include name="CreateCampaign"/>
+          <include name="NavigationToLedCampaign"/>
+          <include name="InvalidLoginCheck"/>
+          <include name="logSummary"/>
           <include name="setup"/>
         </methods>
       </class> <!-- adstestcases.AdsLedCreateCampaignTest -->

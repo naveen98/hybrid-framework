@@ -51,7 +51,9 @@ public class AdsAppselecctionpage {
 			Assert.assertEquals(actualTitle, expectedTitle, "Page Title Does Not match!");
 			}
 			else {
+			
 				System.out.println("Not displayed");
+				Assert.fail();
 			}
 		} catch (Exception e) {
             System.out.println("excepton while verify title"+e.getMessage());

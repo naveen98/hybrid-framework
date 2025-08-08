@@ -39,6 +39,10 @@ public class AdsLoginPage {
 	@FindBy(xpath = "(//strong[normalize-space()='Apollo Digital Signage'])[1]")
 	private WebElement appselection;
 	
+	@FindBy(xpath = "//a[@id='userdroupdown']//img[@alt='logo']")private WebElement clickonprofile;
+	
+	@FindBy(xpath = "(//button[normalize-space()='Logout'])[1]")private WebElement clicklogout;
+	
 	//div[ (contains(@class,'toast-message') or contains(@class,'toast-title') or contains(@class,'modal-body')) ]
 	//div[contains(@class, 'toast-message') and @aria-live='polite']
 	By toastmsg= By.xpath("//div[(contains(@class,'toast-message') and @aria-live='polite') or contains(@class,'modal-body')]");
@@ -125,6 +129,34 @@ public class AdsLoginPage {
 	}
 		
   
+	public void clicklogout() {
+		try {
+			WebElement prof=wait.waitForVisibility(clickonprofile);
+
+		
+		if(prof.isDisplayed()) {
+			
+			wait.waitForClickability(prof).click();
+		}
+		
+		}catch (Exception e) {
+			System.out.println("exception "+ e.getMessage());
+		}
+	
+
+			try {
+				WebElement logout=wait.waitForVisibility(clicklogout);
+
+			
+			if(logout.isDisplayed()) {
+				
+				wait.waitForClickability(logout).click();
+			}
+			
+			}catch (Exception e) {
+				System.out.println("exception "+ e.getMessage());
+			}
+		}
 
 	
 	 public void verifytitle(String expectedTitle) {

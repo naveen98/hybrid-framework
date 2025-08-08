@@ -1,14 +1,9 @@
 package adstestcases;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -26,21 +21,14 @@ import adspages.NavigatetoLedCampaignPage;
 
 public class AdsLedCreateCampaignTest extends AdsLognTest {
 
-	@BeforeClass(alwaysRun = true)
-	public void setupSummary() {
-		Testcasecount.reset("AdsLedCreateCampaignTest");
-	}
 
-	@Test(priority = 0, groups = { "smoke", "Regression" })
+	@Test(priority = 0, groups = { "smoke", "Regression", "both" })
 	public void loginTest() {
 		loginverify();
 	}
 
-	@Test(priority = 1, groups = { "smoke", "Regression" }, dependsOnMethods = { "loginTest" })
+	@Test(priority = 1, groups = {"smoke", "Regression", "both" }, dependsOnMethods = { "loginTest" })
 	public void Appselection() {
-
-		boolean isTestPassed = true;
-
 		AdsExtentManger.logColored(Status.INFO, "====== Test Started: Appselection ======", ExtentColor.BLUE);
 
 		try {
@@ -48,29 +36,16 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 			appselect.appselection();
 			appselect.isTitleAsExpected("Dashboard || ads Application");
 
-			if (isTestPassed) {
-				isTestPassed = true;
-
-				AdsExtentManger.logColored(Status.PASS, "App selection successful", ExtentColor.GREEN);
-			} else {
-
-				AdsExtentManger.logColored(Status.FAIL, "App selection failed", ExtentColor.RED);
-			}
+			AdsExtentManger.logColored(Status.PASS, "App selection successful", ExtentColor.GREEN);
 		} catch (Exception e) {
-			isTestPassed = false;
-
 			AdsExtentManger.logColored(Status.FAIL, "App selection failed: " + e.getMessage(), ExtentColor.RED);
-			Assert.fail();
+			Assert.fail("App selection failed: " + e.getMessage());
 		}
-
 	}
 
-	@Test(priority = 2, groups = { "smoke", "Regression" }, dependsOnMethods = { "Appselection" })
+	@Test(priority = 2, groups = { "smoke", "Regression", "both" }, dependsOnMethods = { "Appselection" })
 	public void NavigationToLedCampaign() {
-
-		boolean isTestPassed = true;
-
-		AdsExtentManger.logColored(Status.INFO, "====== Test Started: NaviagtionToLedCampaign ======",
+		AdsExtentManger.logColored(Status.INFO, "====== Test Started: NavigationToLedCampaign ======",
 				ExtentColor.BLUE);
 
 		try {
@@ -78,42 +53,27 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 			navigation.clickonledcampaign();
 			navigation.istitleExpected("LED Campaigns || ads Application");
 
-			if (isTestPassed) {
-
-				AdsExtentManger.logColored(Status.PASS, "Navigation to LED Campaign successful", ExtentColor.GREEN);
-			} else {
-
-				AdsExtentManger.logColored(Status.FAIL, "Navigation to LED Campaign failed", ExtentColor.RED);
-			}
+			AdsExtentManger.logColored(Status.PASS, "Navigation to LED Campaign successful", ExtentColor.GREEN);
 		} catch (Exception e) {
-			isTestPassed = false;
-
-			AdsExtentManger.logColored(Status.FAIL, "Navigation  failed: " + e.getMessage(), ExtentColor.RED);
+			AdsExtentManger.logColored(Status.FAIL, "Navigation failed: " + e.getMessage(), ExtentColor.RED);
+			Assert.fail("Navigation to LED Campaign failed: " + e.getMessage());
 		}
-
 	}
 
 	@Test(priority = 3, groups = { "smoke" }, dependsOnMethods = { "NavigationToLedCampaign" })
 	public void CreateCampaign() {
-
 		AdsExtentManger.logColored(Status.INFO, "====== Test Started: Create Campaign ======", ExtentColor.BLUE);
 
 		try {
-			// Page objects
 			AddBasicInformationDetailsPage add = new AddBasicInformationDetailsPage(driver);
 			AdsTotalcountspages counts = new AdsTotalcountspages(driver);
 			AdsPaginationsandcount pgcounts = new AdsPaginationsandcount(driver);
 
-			// Initial campaign and page count
 			int beforeTotalCampaignCount = counts.getTotalCampaignCount();
 			int beforePageTotalCount = pgcounts.getTotalPagesFromText();
 
-			System.out.println("Before total campaign count: " + beforeTotalCampaignCount);
-			System.out.println("Before total page count: " + beforePageTotalCount);
-
-			// Read basic campaign data
 			String basicData[][] = Excelutils.getcelldatas(
-					"D:\\git-clone\\hybrid-framework\\src\\test\\resources\\adscreateandedit.xlsx", "Basic");
+					"D:\\Selenium\\hybrid-framework\\src\\test\\resources\\adscreateandedit.xlsx", "Basic");
 
 			boolean overallTestPass = true;
 
@@ -130,7 +90,6 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 					String endTime = basicData[j][8];
 					String displayText = basicData[j][9];
 
-					// Fill campaign basic information
 					add.addcreatebutton();
 					add.entertext(name);
 					add.startDate(startMonth, startYear, startDay);
@@ -140,10 +99,9 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 					add.displayText(displayText);
 					add.clicknext();
 
-					// Fill LED Style Details
 					AddLedStylesPage led = new AddLedStylesPage(driver);
 					String[][] ledData = Excelutils.getcelldatas(
-							"D:\\git-clone\\hybrid-framework\\src\\test\\resources\\adsledstyle.xlsx", "LedStyle");
+							"D:\\Selenium\\hybrid-framework\\src\\test\\resources\\adsledstyle.xlsx", "LedStyle");
 
 					for (int i = 0; i < ledData.length; i++) {
 						try {
@@ -155,12 +113,13 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 							String program = ledData[i][5];
 							String dimension = ledData[i][6];
 
-							led.Ledstyles(font, fontSize, animation, stayTime, style, program);
-							led.clicknext();
-							led.Preview(dimension);
-							led.submitbutton();
+							led.fillLedStyles(font, fontSize, animation, stayTime, style, program);
+							led.clickNext();
 
-							String toastMessage = led.GetToastmessage();
+							led.preview(dimension);
+							led.clickSubmit();
+
+							String toastMessage = led.getToastMessage();
 							boolean isSuccess = toastMessage.toLowerCase().contains("successfully")
 									|| toastMessage.toLowerCase().contains("saved");
 
@@ -171,6 +130,7 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 								overallTestPass = false;
 								AdsExtentManger.logColored(Status.FAIL, "Campaign failed: " + toastMessage,
 										ExtentColor.RED);
+								Assert.fail();
 							}
 						} catch (Exception ledEx) {
 							overallTestPass = false;
@@ -178,7 +138,6 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 									ExtentColor.RED);
 						}
 					}
-
 				} catch (Exception campaignEx) {
 					overallTestPass = false;
 					AdsExtentManger.logColored(Status.FAIL, "Exception in Basic Info: " + campaignEx.getMessage(),
@@ -186,24 +145,17 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 				}
 			}
 
-			// After campaign and page count
 			int afterTotalCampaignCount = counts.getTotalCampaignCount();
 			int afterPageTotalCount = pgcounts.getTotalPagesFromText();
-
-			System.out.println("After total campaign count: " + afterTotalCampaignCount);
-			System.out.println("After page total count: " + afterPageTotalCount);
 
 			AdsExtentManger.logColored(Status.INFO,
 					"Before Campaigns: " + beforeTotalCampaignCount + ", After Campaigns: " + afterTotalCampaignCount,
 					ExtentColor.BLUE);
-			AdsExtentManger.logColored(Status.INFO,
-					"Before Pages: " + beforePageTotalCount + ", After Pages: " + afterPageTotalCount,
-					ExtentColor.BLUE);
+			AdsExtentManger.logColored(Status.INFO, "Before Total page count : " + beforePageTotalCount
+					+ ", afterPageTotalCount: " + afterPageTotalCount, ExtentColor.BLUE);
 
-			// Final result
-			if (overallTestPass && afterTotalCampaignCount > beforeTotalCampaignCount) {
-			} else {
-				Assert.fail("campaigns failed count did not increase.");
+			if (!(overallTestPass && afterTotalCampaignCount > beforeTotalCampaignCount)) {
+				Assert.fail("Campaign creation failed or count did not increase.");
 			}
 
 		} catch (Exception e) {
@@ -211,44 +163,40 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 					ExtentColor.RED);
 			Assert.fail(e.getMessage());
 		}
-
 	}
 
 	@Test(priority = 4, groups = { "smoke" }, dependsOnMethods = { "CreateCampaign" })
 	public void EditCampaign() {
-
 		try {
 			AdsEditCampaign ad = new AdsEditCampaign(driver);
 
 			String[][] data = Excelutils.getcelldatas(
-					"D:\\git-clone\\hybrid-framework\\src\\test\\resources\\adscreateandedit.xlsx", "edit");
-
+					"D:\\Selenium\\hybrid-framework\\src\\test\\resources\\adscreateandedit.xlsx", "edit");
 			boolean isTestPassed = true;
 
-			for (int i = 0; i < data.length; i++) {
-				String name = data[i][0];
-				String startMonth = data[i][1];
-				String startYear = data[i][2];
-				String startDay = data[i][3];
-				String endMonth = data[i][4];
-				String endYear = data[i][5];
-				String endDay = data[i][6];
-				String startTime = data[i][7];
-				String endTime = data[i][8];
-				String displayText = data[i][9];
-				String font = data[i][10];
-				String fontSize = data[i][11];
-				String animation = data[i][12];
-				String stayTime = data[i][13];
-				String style = data[i][14];
-				String program = data[i][15];
-				String dimension = data[i][16];
-				String campaignType = data[i][17];
-				String updateStatus = data[i][18];
-				String status = data[i][19];
+			for (String[] row : data) {
+				String name = row[0];
+				String startMonth = row[1];
+				String startYear = row[2];
+				String startDay = row[3];
+				String endMonth = row[4];
+				String endYear = row[5];
+				String endDay = row[6];
+				String startTime = row[7];
+				String endTime = row[8];
+				String displayText = row[9];
+				String font = row[10];
+				String fontSize = row[11];
+				String animation = row[12];
+				String stayTime = row[13];
+				String style = row[14];
+				String program = row[15];
+				String dimension = row[16];
+				String campaignType = row[17];
+				String updateStatus = row[18];
+				String status = row[19];
 
 				boolean recordFound = ad.searchAndSelect(name);
-
 				if (!recordFound) {
 					AdsExtentManger.logColored(Status.INFO, "No record found for campaign: " + name,
 							ExtentColor.ORANGE);
@@ -262,13 +210,10 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 				ad.setStartTime(startTime);
 				ad.setEndTime(endTime);
 				ad.textDisplays(displayText);
-
 				ad.editLedStyles(font, fontSize, animation, stayTime, style, program, dimension);
 
-				List<List<String>> radioSelect = new ArrayList<>();
-				radioSelect.add(Arrays.asList("Campaign Type", campaignType));
-				radioSelect.add(Arrays.asList("Do you want to update status?", updateStatus));
-				radioSelect.add(Arrays.asList("Status", status));
+				List<List<String>> radioSelect = Arrays.asList(Arrays.asList("Campaign Type", campaignType),
+						Arrays.asList("Do you want to update status?", updateStatus), Arrays.asList("Status", status));
 
 				for (List<String> entry : radioSelect) {
 					String label = entry.get(0);
@@ -282,52 +227,39 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 
 				if (msg.toLowerCase().contains("successfully") || msg.toLowerCase().contains("updated")) {
 					AdsExtentManger.logColored(Status.PASS, "Campaign updated: " + msg, ExtentColor.GREEN);
+					isTestPassed = true;
 				} else {
 					isTestPassed = false;
 					AdsExtentManger.logColored(Status.FAIL, "Update failed: " + msg, ExtentColor.RED);
 					Assert.fail();
 				}
 			}
-
-			Assert.assertTrue(isTestPassed, " campaign updates failed.");
-
 		} catch (Exception e) {
-			Assert.fail("EditCampaign test failed due to exception: " + e.getMessage());
-		}
+			AdsExtentManger.logColored(Status.FAIL, "EditCampaign test failed: " + e.getMessage(), ExtentColor.RED);
+			Assert.fail();
 
+		}
 	}
 
-	@Test(priority = 5, groups = { "smoke" }, dependsOnMethods = { "EditCampaign" })
+	@Test(priority = 5, dependsOnMethods = { "CreateCampaign" }, groups = { "smoke" })
 	public void DeleteCampaign() {
-
 		AdsExtentManger.logColored(Status.INFO, "====== Test Started: Delete Campaign ======", ExtentColor.BLUE);
 
 		AdsDeleteCamapign del = new AdsDeleteCamapign(driver);
 		String campaignToDelete = "Luminous";
 
 		try {
-
 			del.clickmainled();
 			del.searchAndSelect(campaignToDelete);
-
-			if (del.Norecordfound()) {
-				AdsExtentManger.logColored(Status.PASS, "No record found for campaign: " + campaignToDelete,
-						ExtentColor.GREEN);
-				return;
-			}
-
 			del.clickDelete();
 
-			boolean confirmed = del.confirmDeletePopUp();
-			if (!confirmed) {
+			if (!del.confirmDeletePopUp()) {
 				AdsExtentManger.logColored(Status.FAIL, "Delete confirmation popup did not appear.", ExtentColor.RED);
 				return;
 			}
 
 			String msg = del.getDeleteValidationMessage();
-			boolean success = msg.toLowerCase().contains("successfully") || msg.toLowerCase().contains("deleted");
-
-			if (success) {
+			if (msg.toLowerCase().contains("successfully") || msg.toLowerCase().contains("deleted")) {
 				AdsExtentManger.logColored(Status.PASS, "Campaign deleted successfully: " + msg, ExtentColor.GREEN);
 			} else {
 				AdsExtentManger.logColored(Status.FAIL, "Campaign delete failed: " + msg, ExtentColor.RED);
@@ -335,179 +267,194 @@ public class AdsLedCreateCampaignTest extends AdsLognTest {
 			}
 
 		} catch (Exception e) {
-			AdsExtentManger.logColored(Status.FAIL, "Exception  campaign deletion: " + e.getMessage(), ExtentColor.RED);
-		}
+			AdsExtentManger.logColored(Status.FAIL, "Exception during campaign deletion: " + e.getMessage(),
+					ExtentColor.RED);
+			Assert.fail();
 
+		}
 	}
 
 	@Test(priority = 6, groups = { "smoke" }, dependsOnMethods = { "DeleteCampaign" })
 	public void Paginations() {
-
 		AdsExtentManger.logColored(Status.INFO, "====== Test Started: Paginations ======", ExtentColor.BLUE);
 
 		try {
 			AdsPaginationsandcount ads = new AdsPaginationsandcount(driver);
-
 			String[][] data = Excelutils.getcelldatas(
-					"D:\\git-clone\\hybrid-framework\\src\\test\\resources\\paginations.xlsx", "paginations");
+					"D:\\Selenium\\hybrid-framework\\src\\test\\resources\\paginations.xlsx", "paginations");
 
-			for (int i = 0; i < data.length; i++) {
-				String action = data[i][0].trim().toLowerCase(); // it will get data from excel like click /next
-				int expectedPage = Integer.parseInt(data[i][1].trim()); // it will get data from excel like 1 /2/3
+			for (String[] row : data) {
+				String action = row[0].trim().toLowerCase();
+				int expectedPage = Integer.parseInt(row[1].trim());
+				
+				 switch (action) {
+			        case "goto":
+			            ads.navigateToPage(expectedPage);
+			            if (ads.getCurrentPageNumber() != expectedPage) {
+			                AdsExtentManger.logColored(Status.FAIL, "Expected page: " + expectedPage + ", but found: " + ads.getCurrentPageNumber(), ExtentColor.RED);
+			                Assert.fail("Failed to navigate to page " + expectedPage);
+			            }
+			            AdsExtentManger.logColored(Status.PASS, "Navigated to page " + expectedPage, ExtentColor.GREEN);
+			            break;
 
-				switch (action) {
-				case "goto":
-					ads.navigateToPage(expectedPage);
-					int currentPage = ads.getCurrentPageNumber();
-					Assert.assertEquals(currentPage, expectedPage, "Failed to navigate to page " + expectedPage);
-					AdsExtentManger.logColored(Status.PASS, "Navigated to page " + expectedPage + " successfully.",
-							ExtentColor.GREEN);
-					break;
+			        case "next":
+			            ads.clickNextPage();
+			            if (ads.getCurrentPageNumber() != expectedPage) {
+			                AdsExtentManger.logColored(Status.FAIL, "Expected page after next: " + expectedPage + ", but found: " + ads.getCurrentPageNumber(), ExtentColor.RED);
+			                Assert.fail("Failed to click Next to reach page " + expectedPage);
+			            }
+			            AdsExtentManger.logColored(Status.PASS, "Clicked Next. Now on page " + expectedPage, ExtentColor.GREEN);
+			            break;
 
-				case "next":
-					ads.clickNextPage();
-					int nextPage = ads.getCurrentPageNumber();
-					Assert.assertEquals(nextPage, expectedPage,
-							"Next page navigation failed. Expected: " + expectedPage + ", but was: " + nextPage);
-					AdsExtentManger.logColored(Status.PASS, "Clicked Next. Now on page " + nextPage, ExtentColor.GREEN);
-					break;
+			        case "prev":
+			            ads.clickPreviousPage();
+			            if (ads.getCurrentPageNumber() != expectedPage) {
+			                AdsExtentManger.logColored(Status.FAIL, "Expected page after prev: " + expectedPage + ", but found: " + ads.getCurrentPageNumber(), ExtentColor.RED);
+			                Assert.fail("Failed to click Previous to reach page " + expectedPage);
+			            }
+			            AdsExtentManger.logColored(Status.PASS, "Clicked Previous. Now on page " + expectedPage, ExtentColor.GREEN);
+			            break;
 
-				case "prev":
-					ads.clickPreviousPage();
-					int prevPage = ads.getCurrentPageNumber();
-					Assert.assertEquals(prevPage, expectedPage,
-							"Previous page navigation failed. Expected: " + expectedPage + ", but was: " + prevPage);
-					AdsExtentManger.logColored(Status.PASS, "Clicked Previous. Now on page " + prevPage,
-							ExtentColor.GREEN);
-					break;
+			        case "grid":
+			            ads.Gridrefresh();
+			            AdsExtentManger.logColored(Status.PASS, "Grid Refreshed", ExtentColor.GREEN);
+			            break;
 
-				case "grid":
-					ads.Gridrefresh();
-					AdsExtentManger.logColored(Status.PASS, "Grid Refresherd ", ExtentColor.GREEN);
-					break;
-
-				default:
-					AdsExtentManger.logColored(Status.WARNING, "Unknown action: " + action, ExtentColor.ORANGE);
-					break;
+			        default:
+			            AdsExtentManger.logColored(Status.WARNING, "Unknown action: " + action, ExtentColor.ORANGE);
+			            break;
 				}
 			}
 
 		} catch (Exception e) {
 			AdsExtentManger.logColored(Status.FAIL, "Pagination test failed: " + e.getMessage(), ExtentColor.RED);
+			Assert.fail();
+
 		}
 	}
 
-	@Test(priority = 7, groups = {"Regression"}, dependsOnMethods = {"NavigationToLedCampaign"})
+	@Test(priority = 7, groups = { "Regression" }, dependsOnMethods = { "NavigationToLedCampaign" })
 	public void CreatewithInvalid() {
-	    AdsExtentManger.logColored(Status.INFO, "====== Test Started: Create Campaign With Invalid data ======", ExtentColor.BLUE);
+		AdsExtentManger.logColored(Status.INFO, "====== Test Started: Create Campaign ======", ExtentColor.BLUE);
 
-	    try {
-	        // Page object setup
-	        AddBasicInformationDetailsPage add = new AddBasicInformationDetailsPage(driver);
-	        AdsTotalcountspages counts = new AdsTotalcountspages(driver);
-	        AdsPaginationsandcount pgcounts = new AdsPaginationsandcount(driver);
+		try {
+			AddBasicInformationDetailsPage add = new AddBasicInformationDetailsPage(driver);
+			AdsTotalcountspages counts = new AdsTotalcountspages(driver);
+			AdsPaginationsandcount pgcounts = new AdsPaginationsandcount(driver);
 
-	        int beforeCampaignCount = counts.getTotalCampaignCount();
-	        int beforePageCount = pgcounts.getTotalPagesFromText();
+			int beforeTotalCampaignCount = counts.getTotalCampaignCount();
+			int beforePageTotalCount = pgcounts.getTotalPagesFromText();
 
-	        // Read Excel test data
-	        String[][] testData = Excelutils.getcelldatas("D:\\git-clone\\hybrid-framework\\src\\test\\java\\adstestcases\\AdsInvalidcases.java", "Sheet1");
+			String[][] testData = Excelutils.getcelldatas(
+					"D:\\Selenium\\hybrid-framework\\src\\test\\resources\\createadsinvalid.xlsx", "Sheet1");
 
-	        // Store results
-	        List<String[]> results = new ArrayList<>();
+			for (int i = 0; i < testData.length; i++) {
+				AdsExtentManger.logColored(Status.INFO, "=====Executing Row: " + (i + 1) + " =====", ExtentColor.BLUE);
 
-	        // Loop through Excel rows
-	        for (int i = 0; i < testData.length; i++) {
-	            String message = "Row " + (i + 1) + ": ";
-	            boolean skipToNext = false;
+				try {
+					add.addcreatebutton();
 
-	            try {
-	                add.addcreatebutton();  
+					// Step 1: Fill Basic Info
+					String name = testData[i][0];
+					String startMonth = testData[i][1];
+					String startYear = testData[i][2];
+					String startDay = testData[i][3];
+					String endMonth = testData[i][4];
+					String endYear = testData[i][5];
+					String endDay = testData[i][6];
+					String startTime = testData[i][7];
+					String endTime = testData[i][8];
+					String displayText = testData[i][9];
 
-	                // STEP 1: Basic Info
-	                add.entertext(testData[i][0]);
-	                add.startDate(testData[i][1], testData[i][2], testData[i][3]);
-	                add.endDate(testData[i][4], testData[i][5], testData[i][6]);
-	                add.setStartTime(testData[i][7]);
-	                add.setEndTime(testData[i][8]);
-	                add.displayText(testData[i][9]);
-	                add.clicknext();
+					add.entertext(name);
+					add.startDate(startMonth, startYear, startDay);
+					add.endDate(endMonth, endYear, endDay);
+					add.setStartTime(startTime);
+					add.setEndTime(endTime);
+					add.displayText(displayText);
+					add.clicknext();
 
-	                List<String> basicErrors = add.getValidationMessages();
-	                if (!basicErrors.isEmpty()) {
-	                    message += "Basic Info Errors: ";
-	                    for (String error : basicErrors) {
-	                        AdsExtentManger.logColored(Status.INFO, "Basic Info Error: " + error, ExtentColor.RED);
-	                        message += error + " | ";
-	                    }
-	                    results.add(new String[]{String.valueOf(i + 1), "Basic Info Failed", message});
-	                    add.clickonledscreen();  
-	                    continue;
-	                }
+					// Step 1 Validation
+					List<String> basicValidationMessages = add.getValidationMessages();
+					if (!basicValidationMessages.isEmpty()) {
+						AdsExtentManger.logColored(Status.PASS, "Basic Info Validation Errors at Row ",
+								ExtentColor.RED);
+						for (String msg : basicValidationMessages) {
+							AdsExtentManger.logColored(Status.INFO, msg, ExtentColor.RED);
+						}
+						add.clickonledscreen();
+						continue;
+					}
 
-	                // STEP 2: LED Styles
-	                AddLedStylesPage led = new AddLedStylesPage(driver);
-	                led.Ledstyles(testData[i][10], testData[i][11], testData[i][12], testData[i][13], testData[i][14], testData[i][15]);
-	                led.clicknext();
+					// Step 2: Fill LED Styles
+					String font = testData[i][10];
+					String fontSize = testData[i][11];
+					String animation = testData[i][12];
+					String stayTime = testData[i][13];
+					String style = testData[i][14];
+					String program = testData[i][15];
 
-	                List<String> ledErrors = led.getValidationMessages();
-	                if (!ledErrors.isEmpty()) {
-	                    message += "LED Style Errors: ";
-	                    for (String error : ledErrors) {
-	                        AdsExtentManger.logColored(Status.INFO, "LED Style Error: " + error, ExtentColor.RED);
-	                        message += error + " | ";
-	                    }
-	                    results.add(new String[]{String.valueOf(i + 1), "LED Style Failed", message});
-	                    add.clickonledscreen();
-	                    continue;
-	                }
+					AddLedStylesPage led = new AddLedStylesPage(driver);
+					led.fillLedStyles(font, fontSize, animation, stayTime, style, program);
+					led.clickNext();
 
-	                // STEP 3: Submit
-	                led.Preview(testData[i][16]);
-	                led.submitbutton();
+					// Step 2 Validation
+					List<String> ledValidationMessages = led.getValidationMessages();
+					if (!ledValidationMessages.isEmpty()) {
+						AdsExtentManger.logColored(Status.PASS, "LED Style Validation Errors  ", ExtentColor.RED);
+						for (String msg : ledValidationMessages) {
+							AdsExtentManger.logColored(Status.INFO, msg, ExtentColor.RED);
+						}
+						add.clickonledscreen();
+						continue;
+					}
 
-	                String toastMessage = led.GetToastmessage();
-	                boolean isSuccess = toastMessage.toLowerCase().contains("successfully") || toastMessage.toLowerCase().contains("saved");
+					// Step 3: Handle Dimension
+					AddLedStylesPage dim = new AddLedStylesPage(driver);
 
-	                if (isSuccess) {
-	                    AdsExtentManger.logColored(Status.FAIL, "Unexpected success: " + toastMessage, ExtentColor.RED);
-	                    message += "Unexpected Success: " + toastMessage;
-	                    results.add(new String[]{String.valueOf(i + 1), "Unexpected Pass", message});
-	                } else {
-	                    AdsExtentManger.logColored(Status.PASS, "Failed as expected: " + toastMessage, ExtentColor.GREEN);
-	                    message += "Failed as Expected: " + toastMessage;
-	                    results.add(new String[]{String.valueOf(i + 1), "Valid Failure", message});
-	                    add.clickonledscreen(); 
-	                }
+					String dimension = testData[i][16];
+					dim.preview(dimension);
+					dim.clickSubmit();
 
-	            } catch (Exception e) {
-	                AdsExtentManger.logColored(Status.FAIL, "Exception: " + e.getMessage(), ExtentColor.RED);
-	                results.add(new String[]{String.valueOf(i + 1), "Exception", e.getMessage()});
-	            }
-	        }
+					// Toast Message Check
+					String toast = led.getToastMessage();
 
-	        // Final counts after test
-	        int afterCampaignCount = counts.getTotalCampaignCount();
-	        int afterPageCount = pgcounts.getTotalPagesFromText();
+					if (toast.toLowerCase().contains("Successfully") || toast.toLowerCase().contains("saved")) {
+						AdsExtentManger.logColored(Status.FAIL, "Expected Failure" + ": " + toast, ExtentColor.RED);
+						Assert.fail();
 
-	        AdsExtentManger.logColored(Status.INFO, "Before Campaigns: " + beforeCampaignCount + ", After: " + afterCampaignCount, ExtentColor.BLUE);
-	        AdsExtentManger.logColored(Status.INFO, "Before Pages: " + beforePageCount + ", After: " + afterPageCount, ExtentColor.BLUE);
+					} else {
+						AdsExtentManger.logColored(Status.PASS, "Successfully showed Error Message  " + ": " + toast,
+								ExtentColor.RED);
+						add.clickonledscreen();
 
-	      /*  // Print result summary to console
-	        System.out.println("========= Validation Summary =========");
-	        for (String[] result : results) {
-	            System.out.println("Row: " + result[0] + " | Status: " + result[1] + " | Message: " + result[2]);
-	        }*/
+					}
 
-	    } catch (Exception e) {
-	        AdsExtentManger.logColored(Status.FAIL, "Fatal Error: " + e.getMessage(), ExtentColor.RED);
-	        Assert.fail(e.getMessage());
-	    }
+				} catch (Exception e) {
+					AdsExtentManger.logColored(Status.FAIL, "Exception  " + ": " + e.getMessage(), ExtentColor.RED);
+					Assert.fail();
+				}
+			}
+
+			// Final Counts
+			int afterTotalCampaignCount = counts.getTotalCampaignCount();
+			int afterPageTotalCount = pgcounts.getTotalPagesFromText();
+
+			AdsExtentManger.logColored(Status.INFO, "Total Campaign Count - Before: " + beforeTotalCampaignCount
+					+ " | After: " + afterTotalCampaignCount, ExtentColor.BLUE);
+			AdsExtentManger.logColored(Status.INFO,
+					"Total Page Count - Before: " + beforePageTotalCount + " | After: " + afterPageTotalCount,
+					ExtentColor.BLUE);
+
+		} catch (Exception e) {
+			AdsExtentManger.logColored(Status.FAIL, " Exception: " + e.getMessage(), ExtentColor.RED);
+		}
 	}
 
-	@Test(priority = 8, groups = { "smoke", "Regression" })
-	public void logSummary() {
-		TestcaseLogger.logSummary();
+	@Test(priority = 8, groups = { "Regression" })
+	public void InvalidLoginCheck() {
+		LoginInvalidTest.verifyInvalidLoginMultiple();
+
 	}
 
 }

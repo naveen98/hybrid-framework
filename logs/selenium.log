@@ -1,83 +1,78 @@
-2025-07-29 09:42:48 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 09:43:13 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 09:44:23 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.09.44.22.png
-2025-07-29 09:44:23 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 09:46:57 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 09:47:22 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 09:48:44 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.09.48.44.png
-2025-07-29 09:48:44 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 09:53:36 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 09:54:01 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 09:55:03 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.09.55.02.png
-2025-07-29 09:55:03 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 10:03:07 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 10:03:32 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 10:05:23 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.10.05.22.png
-2025-07-29 10:05:23 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 10:06:23 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 10:06:47 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 10:07:50 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.10.07.49.png
-2025-07-29 10:07:50 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 10:08:41 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 10:09:12 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 10:10:14 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.10.10.13.png
-2025-07-29 10:10:14 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 10:30:22 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 10:30:47 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 10:45:11 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 10:46:19 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 10:46:44 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 10:59:07 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 10:59:15 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 10:59:40 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 11:05:31 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 11:05:38 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 11:06:07 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 11:14:58 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 11:15:03 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 11:15:23 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 11:39:29 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 12:16:32 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 12:16:57 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 12:25:02 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 12:35:51 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 12:36:16 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 12:41:28 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 13:00:30 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 13:00:55 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 13:06:05 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 13:13:30 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 13:13:55 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 13:19:18 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 14:24:04 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 14:24:28 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 14:25:09 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 14:25:16 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 14:25:42 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 14:29:37 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 14:30:02 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 14:30:42 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 14:31:24 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 14:31:50 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 14:32:35 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 14:44:25 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 14:48:56 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 14:49:20 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 14:50:01 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 15:21:49 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 15:22:13 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 15:23:41 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 15:24:04 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 15:24:28 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 15:26:00 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 15:39:08 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 15:39:32 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 15:41:24 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 15:48:42 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 15:49:06 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 15:49:43 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/CreatewithInvalid-2025.07.29.15.49.43.png
-2025-07-29 15:49:43 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
-2025-07-29 15:51:41 [main] INFO  AdsBaseClass - Launching browser: chrome
-2025-07-29 15:52:05 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
-2025-07-29 15:52:42 [main] INFO  AdsBaseClass - Screenshot saved at: D:\git-clone\hybrid-framework/Screenshots/CreatewithInvalid-2025.07.29.15.52.42.png
-2025-07-29 15:52:42 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 09:32:37 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 09:33:08 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 09:33:46 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 09:35:35 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 09:36:06 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 09:36:50 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 09:38:31 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 09:39:01 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 09:39:46 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 09:41:15 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 09:41:52 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 09:42:28 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:06:07 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:06:33 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:07:08 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:12:47 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:13:18 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:13:51 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:19:19 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:19:49 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:20:24 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:21:56 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:22:21 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:22:55 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:25:02 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:25:32 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:26:06 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:33:10 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:33:40 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:34:14 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:36:37 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:37:08 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:37:42 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:41:49 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:42:20 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:42:54 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 10:58:30 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 10:59:01 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 10:59:35 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 11:07:59 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 11:08:30 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 11:09:03 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 11:14:44 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 11:15:14 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 11:15:48 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 11:23:30 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 11:24:00 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 11:26:48 [main] INFO  AdsBaseClass - Screenshot saved at: D:\Selenium\hybrid-framework/Screenshotss/CreateCampaign-2025.08.04.11.26.48.png
+2025-08-04 11:26:48 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 11:30:05 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 11:30:30 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 11:31:15 [main] INFO  AdsBaseClass - Screenshot saved at: D:\Selenium\hybrid-framework/Screenshotss/CreateCampaign-2025.08.04.11.31.15.png
+2025-08-04 11:31:15 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 11:37:02 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 11:37:34 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 11:38:28 [main] INFO  AdsBaseClass - Screenshot saved at: D:\Selenium\hybrid-framework/Screenshotss/CreateCampaign-2025.08.04.11.38.27.png
+2025-08-04 11:38:28 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 11:41:06 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 11:41:34 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 11:42:28 [main] INFO  AdsBaseClass - Screenshot saved at: D:\Selenium\hybrid-framework/Screenshotss/CreateCampaign-2025.08.04.11.42.28.png
+2025-08-04 11:42:28 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 11:52:56 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 11:53:27 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 11:54:42 [main] INFO  AdsBaseClass - Screenshot saved at: D:\Selenium\hybrid-framework/Screenshotss/EditCampaign-2025.08.04.11.54.41.png
+2025-08-04 11:54:51 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 12:25:27 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 12:25:58 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 12:26:44 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 12:26:52 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 12:27:23 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 12:28:37 [main] INFO  AdsBaseClass - Screenshot saved at: D:\Selenium\hybrid-framework/Screenshotss/EditCampaign-2025.08.04.12.28.36.png
+2025-08-04 12:28:46 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 12:33:07 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 12:33:38 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 12:34:11 [main] INFO  AdsBaseClass - =========== Closing Browser ===========
+2025-08-04 12:41:47 [main] INFO  AdsBaseClass - Launching browser: chrome
+2025-08-04 12:42:18 [main] INFO  AdsBaseClass - Navigated to URL: https://ads.v36.dev.zeroco.de/
+2025-08-04 12:42:52 [main] INFO  AdsBaseClass - =========== Closing Browser ===========

@@ -153,6 +153,7 @@ public class AdsEditCampaign {
 	            System.out.println("Record found for: " + search);
 	            return true;
 	        } else {
+	        	
 	            System.out.println("Search field is not displayed.");
 	            return false;
 	        }

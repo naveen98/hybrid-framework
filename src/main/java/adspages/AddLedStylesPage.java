@@ -1,9 +1,7 @@
 package adspages;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,6 +16,7 @@ import com.utilites.TimePickersUtil;
 import com.utilites.webdriverwaitutils;
 
 public class AddLedStylesPage {
+
     WebDriver driver;
     webdriverwaitutils wait;
     JavascriptExecutor js;
@@ -34,72 +33,83 @@ public class AddLedStylesPage {
     }
 
     // Dropdown elements
-    @FindBy(xpath = "(//p-dropdown[@placeholder='Select font'])[1]") private WebElement FontDropdown;
-    @FindBy(xpath = "(//p-dropdown[@placeholder='Select font'])[2]") private WebElement Fontsizedropdown;
-    @FindBy(xpath = "//p-dropdown[@placeholder='Select animation speed']") private WebElement Animationspeeddropdown;
-    @FindBy(xpath = "//p-dropdown[@placeholder='Select stay time']") private WebElement satytimedropdown;
-    @FindBy(xpath = "//p-dropdown[@placeholder='Select style']") private WebElement Staystyledropdown;
-    @FindBy(xpath = "//p-dropdown[@placeholder='Select program']") private WebElement programdropdown;
+    @FindBy(xpath = "(//p-dropdown[@placeholder='Select font'])[1]") private WebElement fontDropdown;
+    @FindBy(xpath = "(//p-dropdown[@placeholder='Select font'])[2]") private WebElement fontSizeDropdown;
+    @FindBy(xpath = "//p-dropdown[@placeholder='Select animation speed']") private WebElement animationSpeedDropdown;
+    @FindBy(xpath = "//p-dropdown[@placeholder='Select stay time']") private WebElement stayTimeDropdown;
+    @FindBy(xpath = "//p-dropdown[@placeholder='Select style']") private WebElement stayStyleDropdown;
+    @FindBy(xpath = "//p-dropdown[@placeholder='Select program']") private WebElement programDropdown;
+    @FindBy(xpath = "//p-dropdown[@placeholder='Select dimensions']") private WebElement dimensionDropdown;
 
     // Buttons
-    @FindBy(xpath = "(//button[@id='btnNext'])[2]") private WebElement ledstylenextbutton;
-    @FindBy(xpath = "//button[@id='btnsubmit']") private WebElement Submitbutton;
+    @FindBy(xpath = "(//button[@id='btnNext'])[2]") private WebElement ledStyleNextButton;
+    @FindBy(xpath = "//button[@id='btnsubmit']") private WebElement submitButton;
+    @FindBy(xpath = "(//button[@id='btnBack'])[1]") private WebElement backButton;
+    @FindBy(xpath = "//button[@id='dialog-okay-btn']") private WebElement popupOkButton;
+    @FindBy(xpath = "//button[@id='dialog-cancel-btn']") private WebElement popupCancelButton;
 
-    // Toast messages
-    By toastmsg = By.xpath("//div[contains(@class,'toast-message') or contains(@class,'toast-title')]");
-
-    
-    By popupMessageLocator = By
-			.xpath("//div[contains(@class,'modal-body') and contains(text(),'Data will be removed. do you want to continue?");
-
-    
-    @FindBy(xpath="(//button[@id='btnBack'])[1]")private WebElement Backbutton;
-    @FindBy(xpath = "//button[@id='dialog-okay-btn']")private WebElement popokbtn;
-    @FindBy(xpath = "//button[@id='dialog-cancel-btn']")private WebElement popcancelbtn;
-
-
-    // Drop down option locators
-    private By Fontoptions = By.xpath("//li[@role='option']");
-    private By FontSizeptions = By.xpath("//li[@role='option']");
-    private By Animationoptions = By.xpath("//li[@role='option']");
-    private By Staytimeoptions = By.xpath("//li[@role='option']");
-    private By Styleoptions = By.xpath("//li[@role='option']");
-    private By programoptions = By.xpath("//li[@role='option']");
-
-    //  validation message locator
+    // Locators
+    private By toastMsg = By.xpath("//div[contains(@class,'toast-message') or contains(@class,'toast-title')]");
+    private By popupMessageLocator = By.xpath("//div[contains(@class,'modal-body') and contains(text(),'Data will be removed')]");
     private By validationMessages = By.xpath("//div[contains(@class,'invalid-feedback')]");
+    private By dropdownOptions = By.xpath("//li[@role='option']");
 
-    // Preview section
-    @FindBy(xpath = "//p-dropdown[@placeholder='Select dimensions']") private WebElement dimensiondropdown;
-    private By dimensionoption = By.xpath("//li[@role='option']");
-
-    //Filling 
-    public void Ledstyles(String font, String fontsize, String animation, String staytime, String style, String program) {
+    // Fill dropdowns
+    public void fillLedStyles(String font, String fontSize, String animation, String stayTime, String style, String program) {
         try {
-            Dropdownutils.selectbyvisibletextlistretry(driver, FontDropdown, Fontoptions, font);
-            Dropdownutils.selectbyvisibletextlistretry(driver, Fontsizedropdown, FontSizeptions, fontsize);
-            Dropdownutils.selectbyvisibletextlistretry(driver, Animationspeeddropdown, Animationoptions, animation);
-            Dropdownutils.selectbyvisibletextlistretry(driver, satytimedropdown, Staytimeoptions, staytime);
-            Dropdownutils.selectbyvisibletextlistretry(driver, Staystyledropdown, Styleoptions, style);
-            Dropdownutils.selectbyvisibletextlistretry(driver, programdropdown, programoptions, program);
+            Dropdownutils.selectbyvisibletextlistretry(driver, fontDropdown, dropdownOptions, font);
+            Dropdownutils.selectbyvisibletextlistretry(driver, fontSizeDropdown, dropdownOptions, fontSize);
+            Dropdownutils.selectbyvisibletextlistretry(driver, animationSpeedDropdown, dropdownOptions, animation);
+            Dropdownutils.selectbyvisibletextlistretry(driver, stayTimeDropdown, dropdownOptions, stayTime);
+            Dropdownutils.selectbyvisibletextlistretry(driver, stayStyleDropdown, dropdownOptions, style);
+            Dropdownutils.selectbyvisibletextlistretry(driver, programDropdown, dropdownOptions, program);
         } catch (Exception e) {
-            System.out.println("Exception in Ledstyles " + e.getMessage());
+            System.out.println("Exception in fillLedStyles(): " + e.getMessage());
         }
     }
 
-
-    
-    
-    //  Toast Message 
-    public String GetToastmessage() {
-        String message = "";
+    // Select dimension 
+    public void preview(String dimension) {
         try {
-            List<WebElement> msg = wait.waitForAllElementsVisible(toastmsg);
-            for (WebElement msgelement : msg) {
-                if (msgelement != null && msgelement.isDisplayed()) {
-                    message = msgelement.getText().trim();
-                    System.out.println("Toast Message: " + message);
-                    return message;
+            Dropdownutils.selectbyvisibletextlistretry(driver, dimensionDropdown, dropdownOptions, dimension);
+        } catch (Exception e) {
+            System.out.println("Exception in preview(): " + e.getMessage());
+        }
+    }
+
+    // Click Next button
+    public void clickNext() {
+        try {
+            WebElement nextBtn = wait.waitForVisibility(ledStyleNextButton);
+            if (nextBtn != null && nextBtn.isDisplayed()) {
+                wait.waitForClickability(nextBtn).click();
+            }
+        } catch (Exception e) {
+            js.executeScript("arguments[0].click();", ledStyleNextButton);
+        }
+    }
+
+    // Click Submit button
+    public void clickSubmit() {
+        try {
+            WebElement submitBtn = wait.waitForVisibility(submitButton);
+            if (submitBtn != null && submitBtn.isDisplayed()) {
+                wait.waitForClickability(submitBtn).click();
+            }
+        } catch (Exception e) {
+            js.executeScript("arguments[0].click();", submitButton);
+        }
+    }
+
+    // Get Toast Message
+    public String getToastMessage() {
+        try {
+            List<WebElement> messages = wait.waitForAllElementsVisible(toastMsg);
+            for (WebElement msg : messages) {
+                if (msg != null && msg.isDisplayed()) {
+                    String toast = msg.getText().trim();
+                    System.out.println("Toast Message: " + toast);
+                    return toast;
                 }
             }
         } catch (Exception e) {
@@ -108,79 +118,40 @@ public class AddLedStylesPage {
         return "no message displayed";
     }
 
-    // Capture All Validation Messages 
+    // Get Validation Messages
     public List<String> getValidationMessages() {
         List<String> messages = new ArrayList<>();
-
         try {
-            List<WebElement> validations = wait.waitForAllElementsVisible(validationMessages);
-
-            for (WebElement msg : validations) {
-                if (msg != null && msg.isDisplayed()) {
-                    messages.add(msg.getText().trim());
-                    System.out.println("Validation: " + msg.getText().trim());
+            List<WebElement> validationElements = wait.waitForAllElementsVisible(validationMessages);
+            for (WebElement element : validationElements) {
+                if (element != null && element.isDisplayed()) {
+                    String msg = element.getText().trim();
+                    messages.add(msg);
+                    System.out.println("Validation: " + msg);
                 }
             }
-
         } catch (Exception e) {
             System.out.println("No validation messages found: " + e.getMessage());
         }
-
         return messages;
     }
 
-
-    // click next
-    public void clicknext() {
-    	WebElement nextbtn=wait.waitForVisibility(ledstylenextbutton);
+    // Handle popup clicking OK
+    public boolean handlePopupOK() {
         try {
-        	if(nextbtn!=null&&nextbtn.isDisplayed()) {
-                wait.waitForClickability(nextbtn).click();
-        	}
+            WebElement popupMsg = wait.waitForVisibilityBy(popupMessageLocator);
+            if (popupMsg != null && popupMsg.isDisplayed()) {
+                WebElement okBtn = wait.waitForClickability(popupOkButton);
+                try {
+                    okBtn.click();
+                } catch (Exception ex) {
+                    js.executeScript("arguments[0].click();", popupOkButton);
+                }
+                return true;
+            }
         } catch (Exception e) {
-            js.executeScript("arguments[0].click();", ledstylenextbutton);
+            System.out.println("Popup not displayed: " + e.getMessage());
         }
+        return false;
     }
-
-    //  Preview 
-    public void Preview(String Dimension) {
-        try {
-            Dropdownutils.selectbyvisibletextlistretry(driver, dimensiondropdown, dimensionoption, Dimension);
-        } catch (Exception e) {
-            System.out.println("Exception in Preview(): " + e.getMessage());
-        }
-    }
-
-    // Submit Button 
-    public void submitbutton() {
-    	WebElement submitbtn=wait.waitForVisibility(Submitbutton);
-    	
-        try {
-        	if(submitbtn!=null&&submitbtn.isDisplayed()) {
-        		
-                wait.waitForClickability(submitbtn).click();
-        	}
-        } catch (Exception e) {
-            js.executeScript("arguments[0].click();", Submitbutton);
-        }
-    }
-    
-    public boolean handlepopupOK() {
-		try {
-			WebElement popbtn = wait.waitForVisibilityBy(popupMessageLocator);
-			if (popbtn != null && popbtn.isDisplayed()) {
-				WebElement popok = wait.waitForClickability(popokbtn);
-				try {
-					popok.click();
-				} catch (Exception e) {
-					js.executeScript("arguments[0].click();", popok);
-				}
-				return true;
-			}
-		} catch (Exception e) {
-			System.out.println("Popup not displayed: " + e.getMessage());
-		}
-		return false;
-	}
-	
 }

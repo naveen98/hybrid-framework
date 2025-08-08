@@ -33,6 +33,7 @@ public class AdsLognTest extends AdsBaseClass {
 	                AdsExtentManger.logColored(Status.PASS, "Login Test Passed", ExtentColor.GREEN);
 	            } else {
 	                AdsExtentManger.logColored(Status.FAIL, "Login Test Failed", ExtentColor.RED);
+	                Assert.fail();
 	            }
 	            
 	        } catch (Exception ae) {

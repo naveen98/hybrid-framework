@@ -32,7 +32,7 @@ import org.testng.annotations.Parameters;
 
 public class AdsBaseClass {
 
-    public WebDriver driver;
+    public static  WebDriver driver;
     public String url;
     public String username;
     public String password;
@@ -40,6 +40,7 @@ public class AdsBaseClass {
 
     @Parameters({"browser", "env"})
     @BeforeClass(alwaysRun = true)
+    
     public void setup(String br, String env) {
         log = LogManager.getLogger("AdsBaseClass");
 
@@ -111,7 +112,7 @@ public class AdsBaseClass {
 
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String fileName = testName + "-" + timestamp + ".png";
-        String filePath = System.getProperty("user.dir") + "/Screenshots/" + fileName;
+        String filePath = System.getProperty("user.dir") + "/Screenshotss/" + fileName;
 
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File dest = new File(filePath);

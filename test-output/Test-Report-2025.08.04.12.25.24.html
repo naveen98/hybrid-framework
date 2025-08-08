@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Functional Testing</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jul 29, 2025 10:08:38 am</span></a>
+<a href="#"><span class="badge badge-primary">Aug 4, 2025 12:25:24 pm</span></a>
 </li>
 </ul>
 </div>
@@ -76,25 +76,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">loginTest</p>
             <p class="text-sm">
-              <span>10:09:12 am</span> / <span>00:00:33:923</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>12:25:58 pm</span> / <span>00:00:45:939</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">loginTest</h5>
-<span class='badge badge-success'>07.29.2025 10:09:12 am</span>
-<span class='badge badge-danger'>07.29.2025 10:09:46 am</span>
-<span class='badge badge-default'>00:00:33:923</span>
+<h5 class="test-status text-fail">loginTest</h5>
+<span class='badge badge-success'>08.04.2025 12:25:58 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-default'>00:00:45:939</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -106,37 +106,53 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:09:12 am</td>
+        <td>12:25:58 pm</td>
         <td>
           <span class='badge white-text blue'>Starting login test</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:44 am</td>
+        <td>12:26:31 pm</td>
         <td>
           <span class='badge white-text green'>Entered login credentials: admin</span>
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:46 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text green'>Page title verified successfully</span>
+          <span class='badge white-text red'>Test Failed: loginTest</span>
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:46 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text green'>Login Test Passed</span>
+          <span class='badge white-text red'>Exception: java.lang.AssertionError: Title verification failed: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=138.0.7204.184)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [656fdf4c8246a0f6f6189ac84b7134ab, findElement {value=(//strong[normalize-space()='Apollo Digital Signage'])[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61845}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61845/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 656fdf4c8246a0f6f6189ac84b7134ab</span>
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:46 am</td>
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text green'>Test Passed: loginTest</span>
+          Exception while capturing screenshot: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.184)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [656fdf4c8246a0f6f6189ac84b7134ab, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61845}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61845/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 656fdf4c8246a0f6f6189ac84b7134ab
         </td>
       </tr>
   </tbody>
@@ -144,25 +160,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="skip" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Appselection</p>
             <p class="text-sm">
-              <span>10:09:46 am</span> / <span>00:00:01:742</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>12:26:44 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Appselection</h5>
-<span class='badge badge-success'>07.29.2025 10:09:46 am</span>
-<span class='badge badge-danger'>07.29.2025 10:09:47 am</span>
-<span class='badge badge-default'>00:00:01:742</span>
+<h5 class="test-status text-skip">Appselection</h5>
+<span class='badge badge-success'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -173,24 +189,10 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:09:46 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text blue'>====== Test Started: Appselection ======</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:47 am</td>
-        <td>
-          <span class='badge white-text green'>App selection successful</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:47 am</td>
-        <td>
-          <span class='badge white-text green'>Test Passed: Appselection</span>
+          <span class='badge white-text orange'>Test Skipped: Appselection</span>
         </td>
       </tr>
   </tbody>
@@ -198,25 +200,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="3"
+        <li class="test-item"  status="skip" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">NavigationToLedCampaign</p>
             <p class="text-sm">
-              <span>10:09:47 am</span> / <span>00:00:00:939</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>12:26:44 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">NavigationToLedCampaign</h5>
-<span class='badge badge-success'>07.29.2025 10:09:47 am</span>
-<span class='badge badge-danger'>07.29.2025 10:09:48 am</span>
-<span class='badge badge-default'>00:00:00:939</span>
+<h5 class="test-status text-skip">NavigationToLedCampaign</h5>
+<span class='badge badge-success'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -227,24 +229,10 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:09:47 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text blue'>====== Test Started: NaviagtionToLedCampaign ======</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:48 am</td>
-        <td>
-          <span class='badge white-text green'>Navigation to LED Campaign successful</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:09:48 am</td>
-        <td>
-          <span class='badge white-text green'>Test Passed: NavigationToLedCampaign</span>
+          <span class='badge white-text orange'>Test Skipped: NavigationToLedCampaign</span>
         </td>
       </tr>
   </tbody>
@@ -252,25 +240,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="skip" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">CreateCampaign</p>
             <p class="text-sm">
-              <span>10:09:48 am</span> / <span>00:00:13:822</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>12:26:44 pm</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">CreateCampaign</h5>
-<span class='badge badge-success'>07.29.2025 10:09:48 am</span>
-<span class='badge badge-danger'>07.29.2025 10:10:02 am</span>
-<span class='badge badge-default'>00:00:13:822</span>
+<h5 class="test-status text-skip">CreateCampaign</h5>
+<span class='badge badge-success'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -281,38 +269,10 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:09:48 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text blue'>====== Test Started: Create Campaign ======</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:10:02 am</td>
-        <td>
-          <span class='badge white-text green'>Campaign saved: Successfully saved</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:02 am</td>
-        <td>
-          <span class='badge white-text blue'>Before Campaigns: 67, After Campaigns: 68</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:02 am</td>
-        <td>
-          <span class='badge white-text blue'>Before Pages: 67, After Pages: 68</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:10:02 am</td>
-        <td>
-          <span class='badge white-text green'>Test Passed: CreateCampaign</span>
+          <span class='badge white-text orange'>Test Skipped: CreateCampaign</span>
         </td>
       </tr>
   </tbody>
@@ -320,57 +280,39 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="5"
+        <li class="test-item"  status="skip" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">EditCampaign</p>
             <p class="text-sm">
-              <span>10:10:02 am</span> / <span>00:00:11:861</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>12:26:44 pm</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">EditCampaign</h5>
-<span class='badge badge-success'>07.29.2025 10:10:02 am</span>
-<span class='badge badge-danger'>07.29.2025 10:10:14 am</span>
-<span class='badge badge-default'>00:00:11:861</span>
+<h5 class="test-status text-skip">EditCampaign</h5>
+<span class='badge badge-success'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.10.10.13.png' src="D:\git-clone\hybrid-framework/Screenshots/EditCampaign-2025.07.29.10.10.13.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:10:13 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text red'>Update failed: No Message Displayed</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:10:13 am</td>
-        <td>
-          <span class='badge white-text red'>Test Failed: EditCampaign</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:10:13 am</td>
-        <td>
-          <span class='badge white-text red'>Exception: java.lang.AssertionError: null</span>
+          <span class='badge white-text orange'>Test Skipped: EditCampaign</span>
         </td>
       </tr>
   </tbody>
@@ -385,7 +327,7 @@
           <div class="test-detail">
             <p class="name">DeleteCampaign</p>
             <p class="text-sm">
-              <span>10:10:14 am</span> / <span>00:00:00:000</span>
+              <span>12:26:44 pm</span> / <span>00:00:00:000</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -394,8 +336,8 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">DeleteCampaign</h5>
-<span class='badge badge-success'>07.29.2025 10:10:14 am</span>
-<span class='badge badge-danger'>07.29.2025 10:10:14 am</span>
+<span class='badge badge-success'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
@@ -408,7 +350,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
           <span class='badge white-text orange'>Test Skipped: DeleteCampaign</span>
         </td>
@@ -425,7 +367,7 @@
           <div class="test-detail">
             <p class="name">Paginations</p>
             <p class="text-sm">
-              <span>10:10:14 am</span> / <span>00:00:00:011</span>
+              <span>12:26:44 pm</span> / <span>00:00:00:171</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -434,9 +376,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">Paginations</h5>
-<span class='badge badge-success'>07.29.2025 10:10:14 am</span>
-<span class='badge badge-danger'>07.29.2025 10:10:14 am</span>
-<span class='badge badge-default'>00:00:00:011</span>
+<span class='badge badge-success'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-default'>00:00:00:171</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -448,51 +390,119 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
           <span class='badge white-text orange'>Test Skipped: Paginations</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
           <span class='badge white-text blue'>====== Final Test Summary ======</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text blue'>Test Class: AdsLedCreateCampaignTest</span>
+          <span class='badge white-text blue'>Test Class: </span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
           <span class='badge white-text blue'>Total Test Cases: 7</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text green'>Passed: 4</span>
+          <span class='badge white-text green'>Passed: 0</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
           <span class='badge white-text red'>Failed: 1</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:10:14 am</td>
+        <td>12:26:44 pm</td>
         <td>
-          <span class='badge white-text orange'>Skipped: 2</span>
+          <span class='badge white-text orange'>Skipped: 6</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Final Test Summary</p>
+            <p class="text-sm">
+              <span>12:26:44 pm</span> / <span>00:00:00:004</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Final Test Summary</h5>
+<span class='badge badge-success'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-danger'>08.04.2025 12:26:44 pm</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:26:44 pm</td>
+        <td>
+          <span class='badge white-text grey'>Test Class: Test</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:26:44 pm</td>
+        <td>
+          <span class='badge white-text blue'>Total Test Cases: 7</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:26:44 pm</td>
+        <td>
+          <span class='badge white-text green'>Passed: 0</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:26:44 pm</td>
+        <td>
+          <span class='badge white-text red'>Failed: 1</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:26:44 pm</td>
+        <td>
+          <span class='badge white-text orange'>Skipped: 6</span>
         </td>
       </tr>
   </tbody>
@@ -514,19 +524,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jul 29, 2025 10:08:38 am</h3>
+<h3>Aug 4, 2025 12:25:24 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jul 29, 2025 10:10:15 am</h3>
+<h3>Aug 4, 2025 12:26:44 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>4</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -548,13 +558,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='57%'>
-<b>4</b> tests passed
+<div><small data-tooltip='12%'>
+<b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='14%'><b>1</b> tests failed,
-<b>2</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='12%'><b>1</b> tests failed,
+<b>6</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -571,10 +581,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='37%'><b>10</b> events passed</small></div>
+<div><small data-tooltip='4%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='11%'><b>3</b> events failed,
-<b data-tooltip='%'>14</b> others
+<small data-tooltip='9%'><b>2</b> events failed,
+<b data-tooltip='%'>19</b> others
 </small>
 </div>
 </div>
@@ -590,7 +600,7 @@
 </div></div>
 <script>
 var timeline = {
-"loginTest":33.923,"Appselection":1.742,"NavigationToLedCampaign":0.939,"CreateCampaign":13.822,"EditCampaign":11.861,"DeleteCampaign":0,"Paginations":0.011
+"loginTest":45.939,"Appselection":0.001,"NavigationToLedCampaign":0.001,"CreateCampaign":0.001,"EditCampaign":0,"DeleteCampaign":0,"Paginations":0.171,"Final Test Summary":0.004
 };
 </script>
 <div class="row">
@@ -629,10 +639,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 4,
+passParent: 1,
 failParent: 1,
 warningParent: 0,
-skipParent: 2,
+skipParent: 6,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -646,10 +656,10 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 10,
-failEvents: 3,
-warningEvents: 0,
-skipEvents: 2,
+passEvents: 1,
+failEvents: 2,
+warningEvents: 1,
+skipEvents: 6,
 infoEvents: 12
 };
 </script>        </div>

@@ -34,6 +34,7 @@ public class webdriverwaitutils {
 	    public WebElement waitForPresence(By locator) {
 	        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	    }
+	    
 
 	    
 	    public Alert waitForAlert() {

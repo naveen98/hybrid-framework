@@ -158,7 +158,6 @@ public class AdsDeleteCamapign {
 		try {
 			WebElement norecords=wait.waitForVisibility(norecordfound);
 			if(norecords.isDisplayed()) {
-				wait.waitForVisibility(norecordfound).isDisplayed();
 				return true;
 			}
 			else {
